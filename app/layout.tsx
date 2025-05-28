@@ -14,7 +14,7 @@ const vercettiFont = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Ramses Salcedo ✌️",
+  title: "Ramses Salcedo - Developer",
   description: "A developer by profession, a creative at heart.",
   keywords: "Ramses Salcedo, Software Engineer, React Developer, Three.js, Creative Developer, Web Development, Angular, JavaScript, TypeScript, Portfolio",
   authors: [{ name: "Ramses Salcedo" }],
