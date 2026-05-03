@@ -1,11 +1,13 @@
-"use client";
+'use client';
 
+import React from 'react';
 import Link from 'next/link';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { 
+  TrendingUp, 
   Globe, 
   Zap, 
-  BarChart3, 
+  BarChart3,
   ArrowRight,
   Database,
   PieChart,
@@ -30,8 +32,8 @@ const Navbar = () => (
 
 const Hero = () => (
   <section className="min-h-screen flex flex-col justify-center px-8 sm:px-16 md:px-24 relative overflow-hidden bg-black selection:bg-emerald-500 selection:text-black">
-    <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)', backgroundSize: '60px 60px' }}></div>
-    <div className="absolute top-1/4 right-0 w-[800px] h-[800px] bg-emerald-500/5 blur-[180px] rounded-full -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+    <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
+    <div className="absolute top-1/4 right-0 w-[800px] h-[800px] bg-emerald-500/5 blur-[180px] rounded-full -translate-y-1/2 translate-x-1/2 pointer-events-none" />
     
     <div className="max-w-7xl relative z-10 w-full">
       <motion.div 
@@ -41,12 +43,12 @@ const Hero = () => (
         transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
       >
         <div className="flex items-center gap-4 mb-16">
-          <div className="h-[1px] w-16 bg-emerald-500"></div>
+          <div className="h-[1px] w-16 bg-emerald-500" />
           <span className="font-mono text-[9px] tracking-[0.6em] text-emerald-500 uppercase font-black">Open Position // Markets</span>
         </div>
         
         <h1 className="text-[clamp(3.5rem,15vw,12rem)] font-black tracking-tighter leading-[0.75] mb-20 text-white italic">
-          PRICING <br /> <span className="text-zinc-900" style={{ WebkitTextStroke: '1.5px rgba(255,255,255,0.15)', color: 'transparent' }}>VOLATILITY.</span>
+          PRICING <br /> <span className="outline-text block" style={{ WebkitTextStroke: '1.5px rgba(255,255,255,0.15)', color: 'transparent' }}>VOLATILITY.</span>
         </h1>
 
         <div className="grid lg:grid-cols-2 gap-20 items-end">
@@ -81,7 +83,7 @@ const Hero = () => (
       onClick={() => document.getElementById('requirements')?.scrollIntoView({ behavior: 'smooth' })}
     >
       <div className="relative h-24 w-px bg-zinc-800 overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full bg-emerald-500 -translate-y-full animate-[scroll_2s_infinite]"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-emerald-500 -translate-y-full animate-[scroll_2s_infinite]" />
       </div>
       <span className="font-mono text-[8px] tracking-[0.8em] uppercase text-zinc-700 font-bold group-hover:text-white transition-colors">Analyze_Criteria</span>
     </motion.div>
@@ -95,7 +97,7 @@ const BentoPrerequisites = () => {
       desc: "Expertise in pricing Yes/No outcomes. Thinking in 0.0 to 1.0.", 
       icon: <Database className="w-5 h-5" />,
       span: "md:col-span-1",
-      bg: "bg-zinc-950"
+      bg: "bg-zinc-900"
     },
     { 
       title: "Information Alpha", 
@@ -155,7 +157,7 @@ const BentoPrerequisites = () => {
 
 const Package = () => (
   <section id="package" className="py-48 px-8 sm:px-24 bg-zinc-950 relative overflow-hidden">
-    <div className="absolute top-0 right-0 w-1/2 h-full bg-emerald-500/5 blur-[180px] rounded-full translate-x-1/2 pointer-events-none"></div>
+    <div className="absolute top-0 right-0 w-1/2 h-full bg-emerald-500/5 blur-[180px] rounded-full translate-x-1/2 pointer-events-none" />
     <div className="max-w-5xl mx-auto border border-white/5 bg-white/[0.02] backdrop-blur-3xl rounded-[4rem] p-16 md:p-32 relative z-10 shadow-2xl">
       <div className="mb-24">
         <div className="text-[10px] font-mono text-emerald-500 mb-4 uppercase tracking-[0.6em] font-black italic">The Offer</div>
@@ -181,10 +183,10 @@ const Package = () => (
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8">
            {[
-             { label: "Remote First", icon: <Globe /> },
-             { label: "Hardware", icon: <Zap /> },
-             { label: "Equity", icon: <PieChart /> },
-             { label: "Flexible", icon: <Clock /> }
+             { label: "Remote First", icon: <Globe className="w-5 h-5" /> },
+             { label: "Hardware", icon: <Zap className="w-5 h-5" /> },
+             { label: "Equity", icon: <PieChart className="w-5 h-5" /> },
+             { label: "Flexible", icon: <Clock className="w-5 h-5" /> }
            ].map((item, i) => (
              <div key={i} className="flex flex-col gap-4">
                 <div className="text-emerald-500 scale-125">{item.icon}</div>
@@ -207,7 +209,7 @@ const CTA = () => (
         transition={{ duration: 1 }}
       >
         <span className="font-mono text-[10px] text-zinc-600 uppercase tracking-[0.8em] font-black mb-12 block">Submission Terminal</span>
-        <h2 className="text-[clamp(3rem,10vw,8rem)] font-black text-white tracking-tighter mb-16 italic leading-none">Ready to <span style={{ WebkitTextStroke: '1px white', color: 'transparent' }}>predict?</span></h2>
+        <h2 className="text-[clamp(3rem,10vw,8rem)] font-black text-white tracking-tighter mb-16 italic leading-none">Ready to <span className="outline-text" style={{ WebkitTextStroke: '1px white', color: 'transparent' }}>predict?</span></h2>
         
         <div className="flex flex-col items-center gap-12 justify-center">
           <a 
@@ -219,7 +221,7 @@ const CTA = () => (
           </a>
           <div className="max-w-lg">
             <p className="text-zinc-600 font-mono text-[10px] tracking-widest uppercase leading-loose font-bold">
-              We aren't looking for resumes—we're looking for edges. Show us a market you've priced correctly and provide the thesis.
+              We aren&apos;t looking for resumes—we&apos;re looking for edges. Show us a market you&apos;ve priced correctly and provide the thesis.
             </p>
           </div>
         </div>
@@ -232,13 +234,13 @@ const Footer = () => (
   <footer className="py-24 border-t border-zinc-900 bg-black text-zinc-700 text-[9px] px-8 font-mono uppercase tracking-[0.5em] font-black">
     <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
       <div className="flex items-center gap-4">
-        <div className="w-1 h-1 bg-zinc-800 rounded-full"></div>
+        <div className="w-1 h-1 bg-zinc-800 rounded-full" />
         <span>Ramses Salcedo_Systems</span>
       </div>
       <div className="flex gap-12 font-bold mb-12 md:mb-0">
         <Link href="#" className="hover:text-white transition-colors">Privacy</Link>
-        <Link href="#" className="hover:text-white transition-colors">Twitter</Link>
-        <Link href="#" className="hover:text-white transition-colors">Mirror</Link>
+        <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Twitter</a>
+        <a href="https://mirror.xyz" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Mirror</a>
       </div>
       <div className="opacity-40">
         &copy; {new Date().getFullYear()} ALL_RIGHTS_RESERVED.
@@ -263,6 +265,10 @@ export default function HiringPage() {
         @keyframes scroll {
           0% { transform: translateY(-100%); }
           100% { transform: translateY(100%); }
+        }
+        .outline-text {
+          color: transparent;
+          -webkit-text-stroke: 1px rgba(255,255,255,0.2);
         }
         html {
           scroll-behavior: smooth;
